@@ -31,6 +31,7 @@ protected $state;
             '#attached' => ['library' => ['waffle_icecream_form/icewaffle_media']],
             '#icecream_orders' => $this->orderState->getOrders('Icecream'),
             '#waffle_orders' => $this->orderState->getOrders('Waffle'),
+            '#orders' => $this->orderState->getAllOrders(),
           ];
     }
   

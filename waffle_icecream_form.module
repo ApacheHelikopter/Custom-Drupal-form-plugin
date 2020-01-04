@@ -7,7 +7,20 @@ function waffle_icecream_form_theme() {
   return [
     'icewaffle' => [
       'variables' => [
-        'orders' => NULL,
+        'icecream_orders' => NULL,
+        'waffle_orders' => NULL,
+        'orders' => [
+          'id' => 'id',
+          'last_name' => 'last_name',
+          'first_name' => 'first_name',
+          'ice_waffle' => NULL,
+          'ice_flavour' => 'ice_flavour',
+          'waffle_topping_1' => 'waffle_topping_1',
+          'waffle_topping_2' => 'waffle_topping_2',
+          'waffle_topping_3' => 'waffle_topping_3',
+          'waffle_topping_4' => 'waffle_topping_4',
+          'time_clicked' => 'time_clicked'
+        ],
       ],
     ],
   ];

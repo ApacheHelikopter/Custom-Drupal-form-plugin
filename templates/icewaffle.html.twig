@@ -3,4 +3,7 @@
   <span class="icewaffle-count">{{ icecream_orders }}</span>
   <h1>Waffle orders</h1>
   <span class="icewaffle-count">{{ waffle_orders }}</span>
+  {% for order in orders %}
+    <span class="icewaffle-count">{{ order.ice_waffle }}</span>
+  {% endfor %}
 </div>
