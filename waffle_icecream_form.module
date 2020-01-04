@@ -6,7 +6,9 @@
 function waffle_icecream_form_theme() {
   return [
     'icewaffle' => [
-      'variables' => [],
+      'variables' => [
+        'orders' => NULL,
+      ],
     ],
   ];
 }

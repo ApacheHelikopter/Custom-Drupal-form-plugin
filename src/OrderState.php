@@ -30,4 +30,10 @@ class OrderState {
           ])->execute()
         ;
     }
+
+    public function getOrders(string $iceWaffle){
+      $query = $this->connection->select('waffle_icecream_form_orderstate', 'w');
+      $query->condition('w.ice_waffle', $iceWaffle);
+      return (int) $query->countQuery()->execute()->fetchField();
+    }
 }

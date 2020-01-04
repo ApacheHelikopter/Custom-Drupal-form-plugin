@@ -1,0 +1,6 @@
+icewaffle_media:
+  version: VERSION
+  css:
+    component:
+      assets/css/icewaffle-media.css : {}
+

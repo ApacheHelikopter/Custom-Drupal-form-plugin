@@ -4,3 +4,9 @@ waffle_icecream_form.admin.settings:
     _form: 'Drupal\waffle_icecream_form\Form\SettingsForm'
   requirements:
     _permission: 'access administration pages'
+waffle_icecream_form.orderlist:
+  path: '/admin/waffle_icecream_form/orderlist'
+  defaults:
+    _controller: 'Drupal\waffle_icecream_form\Controller\OrderlistController::buildOrderlist'
+  requirements:
+    _permission: 'view order lists'
