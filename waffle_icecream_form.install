@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+
+function waffle_icecream_form_schema() {
+  $schema['waffle_icecream_form_orderstate'] = [
+    'fields' => [
+      'id' => [
+        'description' => 'Order ID',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+
+      'last_name' => [
+        'description' => 'Last name of recipient',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'first_name' => [
+        'description' => 'First Name of recipient',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'ice_waffle' => [
+        'description' => 'Icecream or waffle',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'ice_flavour' => [
+        'description' => 'Icecream flavour',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'waffle_topping_1' => [
+        'description' => 'Waffle topping',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'waffle_topping_2' => [
+        'description' => 'Waffle topping',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'waffle_topping_3' => [
+        'description' => 'Waffle topping',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'waffle_topping_4' => [
+        'description' => 'Waffle topping',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+      'time_clicked' => [
+        'description' => 'The Unix timestamp when the user clicked on an social media icon.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+
+    ],
+
+    'primary key' => [
+      'id',
+    ],
+
+  ];
+
+  return $schema;
+}
+
+/**
+ * Create IceWaffle order state table.
+ */
+
+function waffle_icecream_form_update_8001(&$sandbox) {
+  $table = waffle_icecream_form_schema();
+  \Drupal::database()->schema()->createTable('waffle_icecream_form_orderstate', $table['waffle_icecream_form_orderstate']);
+}

@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function waffle_icecream_form_theme() {
+  return [
+    'icewaffle' => [
+      'variables' => [],
+    ],
+  ];
+}

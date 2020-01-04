@@ -1,0 +1,4 @@
+services:
+  waffle_icecream_form.order_state:
+    class: Drupal\waffle_icecream_form\OrderState
+    arguments: ['@database', '@datetime.time']
